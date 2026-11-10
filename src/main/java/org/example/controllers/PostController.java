@@ -16,9 +16,7 @@ public class PostController {
     }
     @PostMapping("/{userid}")
     public PostResponseDTO CreatePost(@RequestBody PostRequestDTO data, @PathVariable String userid){
-         System.out.println("hi 1");
          PostResponseDTO prd= service.createPost(data,userid);
-         System.out.println("hi 2");
          return prd;
 
     }
